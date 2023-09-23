@@ -1,0 +1,24 @@
+<div class="main-content">
+
+
+  <img src="../assets/img/Logo.jpg" alt="ChuckLogo" class="logo">
+
+<div class="search-content">
+  <input type="text" placeholder="Enter Your Search Term" #searchTerm>
+  <button type="button" (click)="searchBySearchTerm(searchTerm.value)">Search</button>
+</div>
+
+<div class="categories">
+  <span class="category" 
+  *ngFor="let category of categories"
+  (click)="searchByCategory(category)">{{category}}</span>
+  
+</div>
+
+<div class="joke-wrapper" *ngFor="let joke of jokes">
+  <div class="joke">
+   
+    <p>{{joke.value}}</p>
+  </div>
+</div>
+</div>
